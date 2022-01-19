@@ -24,10 +24,10 @@ const App: React.FC = () => {
 
   if (!user) {
     return (
-      <>
-        <Header user={null} logoutHandler={logoutHandler} />
+      <div>
+        <Header  user={null} logoutHandler={logoutHandler} />
         <Landing handleAuth={handleAuth}/>
-      </>
+      </div>
     );
   } else {
     return(
