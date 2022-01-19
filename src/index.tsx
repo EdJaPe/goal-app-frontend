@@ -5,7 +5,7 @@ import App from './App';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Dashboard from './components/Dashboard/Dashboard';
 import NewOutcome from './components/NewOutcome/NewOutcome';
-import 'tachyons'
+import 'tachyons';
 
 
 ReactDOM.render(
