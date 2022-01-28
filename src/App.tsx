@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Outlet} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import { User } from './interfaces/user.model'
 
@@ -10,7 +10,7 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
 
   const handleAuth = (user: User) => {
-    if(user) {
+    if (user) {
       setUser(user);
     } else {
       setUser(null);
@@ -24,14 +24,14 @@ const App: React.FC = () => {
 
   if (!user) {
     return (
-      <div className='tc bg-light-green'>
-        <Header  user={null} logoutHandler={logoutHandler} />
-        <Landing handleAuth={handleAuth}/>
+      <div className='tc bg-near-white gray'>
+        <Header user={null} logoutHandler={logoutHandler} />
+        <Landing handleAuth={handleAuth} />
       </div>
     );
   } else {
-    return(
-      <div className='tc bg-light-green'>
+    return (
+      <div className='tc bg-near-white gray'>
         <Header user={user} logoutHandler={logoutHandler} />
         <Outlet />
       </div>

@@ -20,6 +20,9 @@ body {
   --font-size-lg: calc(var(--font-size-sm) * 10);
   --font-size-xl: calc(var(--font-size-sm) * 15);
 
+  --primary: #357EDD;
+  --secondary: #FF6300;
+  --near-white: #F4F4F4;
   --warning-clr: red;
   --go-clr:green;
   --fir-clr:violet;
@@ -41,14 +44,14 @@ ul {
   margin-top:var(--mar-pad-reg);
   background-color: var(--sec-clr);
 }
-
+/**********Landing**************/
 #landing {
   text-align: center;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
-
+/**********Dashboard**************/
 #dashboard {
   height:90vh;
   width:100vw;
@@ -80,7 +83,7 @@ fieldset {
 }
 .delete-circle {
   text-align: center;
-  border-radius: 50%;
+  -radius: 50%;
   border-width:0;
   outline: 1px solid black;
   font-style: var(--font-size-sm);
@@ -105,6 +108,7 @@ main {
 }
 #dash-header {
   display: flex;
+  
   justify-content: space-around;
   flex-direction: column;
   margin-left: var(--mar-pad-xl);
@@ -157,7 +161,8 @@ h1 {
 
 h2 {
   font-size: var(--font-size-lg);
-  text-decoration: underline;
+  text-decoration:none;
+  color: var(--secondary);
 }
 
 h3 {
@@ -180,7 +185,7 @@ li > button {
 }
 
 input {
-  border:2px solid black;
+  border:1px solid black;
 }
 
   @media only screen and (min-width: 750px) {
@@ -271,3 +276,34 @@ input {
       width:12%;
     }
   }
+button{
+  border-radius: .5rem;
+  color: var(--near-white) ;
+  text-decoration: none;
+  transition: color .15s ease-in;
+  background-color: #00449e;
+  margin-bottom: .5rem;
+  font-size: .875rem;
+  opacity: 1;
+  transition: opacity .15s ease-in;
+
+}
+button:button, button:visited {
+  transition: color .15s ease-in;
+}
+
+button:hover {
+  opacity: .5;
+  transition: color .15s ease-in;
+}
+
+button:active {
+  opacity: .8;
+  transition: color .15s ease-in;
+}
+
+button:focus {
+  opacity: .5;
+  transition: color .15s ease-in;
+  outline: 1px dotted currentColor;
+}

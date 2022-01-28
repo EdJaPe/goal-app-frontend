@@ -7,11 +7,11 @@ type authHeaderProps = {
     logoutHandler: () => void;
 };
 
-const AuthHeader: React.FC <authHeaderProps> = (props) => {
+const AuthHeader: React.FC<authHeaderProps> = (props) => {
     return (
         <>
             <header>
-                <h3>
+                <h3 className="headerWelcome ">
                     Welcome {props.user.name}
                 </h3>
                 <nav>
@@ -20,7 +20,7 @@ const AuthHeader: React.FC <authHeaderProps> = (props) => {
                     <Link to="/" onClick={props.logoutHandler}>Logout</Link>
                 </nav>
             </header>
-            
+
         </>
     )
 };
